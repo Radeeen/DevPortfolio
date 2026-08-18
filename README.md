@@ -1,75 +1,27 @@
-# Nuxt Minimal Starter
+# DevPortfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Personal portfolio of R Herick Fauzi Komara Kusumah — fullstack developer.
 
-## Setup
+Built with Nuxt 4, Tailwind CSS v4 and `@nuxt/content`. Statically generated,
+deployed on Vercel.
 
-Make sure to install dependencies:
+## Development
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+npm run dev        # http://localhost:3000
+npm test           # Vitest
+npm run generate   # static build to .output/public
 ```
 
-## Development Server
+## Adding a project
 
-Start the development server on `http://localhost:3000`:
+Create a Markdown file in `content/projects/`. The frontmatter schema is defined
+in `content.config.ts` and validated at build time — a missing or misspelled
+field fails the build rather than rendering an empty page.
 
-```bash
-# npm
-npm run dev
+## Configuration
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Copy `.env.example` to `.env`. `NUXT_PUBLIC_WHATSAPP` is optional; leaving it
+blank hides the WhatsApp link. Personal contact numbers are deliberately kept
+out of version control.
