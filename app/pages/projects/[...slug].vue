@@ -35,7 +35,7 @@ useSeoMeta({
           team: project.team,
           stack: project.stack,
           published: project.published,
-          confidential: project.confidential ?? false,
+          confidential: project.confidential ?? true,
           repo: project.repo,
           demo: project.demo,
         }"
@@ -89,6 +89,14 @@ useSeoMeta({
   margin-bottom: 1rem;
   padding-left: 1.25rem;
   list-style: disc;
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+.case-study :deep(ol) {
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+  list-style: decimal;
   color: var(--color-muted);
   line-height: 1.75;
 }

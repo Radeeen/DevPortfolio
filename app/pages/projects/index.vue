@@ -3,7 +3,9 @@ const { data: projects } = await useAsyncData('projects-index', () =>
   queryCollection('projects').order('date', 'DESC').all(),
 )
 
-const selected = ref('all')
+type ProjectTag = 'fullstack' | 'data-ml' | 'ui-ux'
+
+const selected = ref<ProjectTag | 'all'>('all')
 
 const tags = computed(() => {
   const seen = new Set<string>()
@@ -15,8 +17,9 @@ const tags = computed(() => {
 
 const visible = computed(() => {
   const all = projects.value ?? []
-  if (selected.value === 'all') return all
-  return all.filter(project => (project.tags ?? []).includes(selected.value))
+  const tag = selected.value
+  if (tag === 'all') return all
+  return all.filter(project => (project.tags ?? []).includes(tag))
 })
 
 useSeoMeta({

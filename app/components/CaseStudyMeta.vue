@@ -24,7 +24,7 @@ const category = computed(() =>
   props.project.tags.map(tag => LABELS[tag] ?? tag).join(', '),
 )
 const showLinks = computed(
-  () => !props.project.confidential && (props.project.repo || props.project.demo),
+  () => props.project.confidential === false && (props.project.repo || props.project.demo),
 )
 </script>
 
@@ -80,9 +80,9 @@ const showLinks = computed(
           >Gallery</a>
         </dd>
       </div>
-      <p v-if="props.project.confidential" class="text-xs leading-relaxed text-subtle">
-        Source code is not public — this system runs inside a government network.
-      </p>
     </dl>
+    <p v-if="props.project.confidential" class="text-xs leading-relaxed text-subtle">
+      Source code is not public — this system runs inside a government network.
+    </p>
   </aside>
 </template>

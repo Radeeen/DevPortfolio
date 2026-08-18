@@ -32,4 +32,21 @@ describe('CaseStudyMeta', () => {
     expect(wrapper.text()).toContain('Source code is not public')
     expect(wrapper.find('a[href="https://example.com"]').exists()).toBe(false)
   })
+
+  it('renders no link when confidential is omitted entirely (fail-closed default)', () => {
+    const { confidential, ...withoutConfidential } = base
+    const wrapper = mount(CaseStudyMeta, {
+      props: {
+        project: { ...withoutConfidential, repo: 'https://example.com' } as unknown as {
+          date: string
+          tags: string[]
+          role: string
+          stack: string[]
+          confidential: boolean
+          repo?: string
+        },
+      },
+    })
+    expect(wrapper.find('a[href="https://example.com"]').exists()).toBe(false)
+  })
 })
