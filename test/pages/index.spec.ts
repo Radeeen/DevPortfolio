@@ -10,12 +10,15 @@ describe('home page source', () => {
   })
 
   it('names the technologies missing from the old portfolio', () => {
-    for (const tech of ['Laravel', 'Vue', 'Node.js', 'Java']) {
+    for (const tech of ['Laravel', 'Vue', 'Node.js']) {
       expect(source, `home page must mention ${tech}`).toContain(tech)
     }
+    expect(source, 'home page must mention Java standalone, not just as part of JavaScript').toMatch(
+      /\bJava\b(?!Script)/,
+    )
   })
 
   it('queries only featured projects', () => {
-    expect(source).toContain("where('featured'")
+    expect(source).toContain("where('featured', '=', true)")
   })
 })

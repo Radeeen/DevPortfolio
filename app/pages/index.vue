@@ -71,20 +71,20 @@ useSeoMeta({
     </section>
 
     <section class="py-10">
-      <SectionLabel>Selected work</SectionLabel>
-      <div class="grid gap-4 sm:grid-cols-2">
-        <ProjectCard
-          v-for="project in featured"
-          :key="project.path"
-          :project="{
-            path: project.path,
-            title: project.title,
-            summary: project.summary,
-            tags: project.tags,
-            stack: project.stack,
-          }"
-        />
-      </div>
+      <SectionLabel as="h2">Selected work</SectionLabel>
+      <ul class="grid gap-4 sm:grid-cols-2">
+        <li v-for="project in featured" :key="project.path">
+          <ProjectCard
+            :project="{
+              path: project.path,
+              title: project.title,
+              summary: project.summary,
+              tags: project.tags,
+              stack: project.stack,
+            }"
+          />
+        </li>
+      </ul>
       <NuxtLink
         to="/projects"
         class="mt-6 inline-block font-mono text-sm text-accent hover:underline"
@@ -94,7 +94,7 @@ useSeoMeta({
     </section>
 
     <section class="py-10">
-      <SectionLabel>Experience</SectionLabel>
+      <SectionLabel as="h2">Experience</SectionLabel>
       <ul class="space-y-6">
         <li
           v-for="entry in experience"
@@ -110,9 +110,9 @@ useSeoMeta({
     </section>
 
     <section class="py-10">
-      <SectionLabel>Skills</SectionLabel>
-      <div class="grid gap-6 sm:grid-cols-2">
-        <div v-for="group in skills" :key="group.group">
+      <SectionLabel as="h2">Skills</SectionLabel>
+      <ul class="grid gap-6 sm:grid-cols-2">
+        <li v-for="group in skills" :key="group.group">
           <h3 class="mb-2 text-sm font-semibold text-ink">{{ group.group }}</h3>
           <ul class="flex flex-wrap gap-1.5">
             <li
@@ -121,8 +121,8 @@ useSeoMeta({
               class="rounded border border-line px-2 py-0.5 font-mono text-xs text-muted"
             >{{ item }}</li>
           </ul>
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
   </div>
 </template>

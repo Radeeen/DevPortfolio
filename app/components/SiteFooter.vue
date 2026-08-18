@@ -6,7 +6,7 @@ const whatsapp = computed(() => config.public.whatsapp as string)
 <template>
   <footer class="mt-24 border-t border-line">
     <div class="mx-auto max-w-4xl px-6 py-10">
-      <SectionLabel>Contact</SectionLabel>
+      <SectionLabel as="h2">Contact</SectionLabel>
       <p class="mb-5 max-w-lg text-sm leading-relaxed text-muted">
         Open to fullstack and data roles in Jakarta or remote. The fastest way to
         reach me is email.
