@@ -70,59 +70,65 @@ useSeoMeta({
       />
     </section>
 
-    <section class="py-10">
-      <SectionLabel as="h2">Selected work</SectionLabel>
-      <ul class="grid gap-4 sm:grid-cols-2">
-        <li v-for="project in featured" :key="project.path">
-          <ProjectCard
-            :project="{
-              path: project.path,
-              title: project.title,
-              summary: project.summary,
-              tags: project.tags,
-              stack: project.stack,
-            }"
-          />
-        </li>
-      </ul>
-      <NuxtLink
-        to="/projects"
-        class="mt-6 inline-block font-mono text-sm text-accent hover:underline"
-      >
-        All six projects &rarr;
-      </NuxtLink>
-    </section>
-
-    <section class="py-10">
-      <SectionLabel as="h2">Experience</SectionLabel>
-      <ul class="space-y-6">
-        <li
-          v-for="entry in experience"
-          :key="entry.role + entry.period"
-          class="border-l border-line pl-5"
+    <FadeIn>
+      <section class="py-10">
+        <SectionLabel as="h2">Selected work</SectionLabel>
+        <ul class="grid gap-4 sm:grid-cols-2">
+          <li v-for="project in featured" :key="project.path">
+            <ProjectCard
+              :project="{
+                path: project.path,
+                title: project.title,
+                summary: project.summary,
+                tags: project.tags,
+                stack: project.stack,
+              }"
+            />
+          </li>
+        </ul>
+        <NuxtLink
+          to="/projects"
+          class="mt-6 inline-block font-mono text-sm text-accent hover:underline"
         >
-          <p class="font-mono text-xs text-subtle">{{ entry.period }}</p>
-          <h3 class="mt-1 text-base font-semibold text-ink">{{ entry.role }}</h3>
-          <p class="text-sm text-accent">{{ entry.org }}</p>
-          <p class="mt-1 max-w-xl text-sm leading-relaxed text-muted">{{ entry.note }}</p>
-        </li>
-      </ul>
-    </section>
+          All six projects &rarr;
+        </NuxtLink>
+      </section>
+    </FadeIn>
 
-    <section class="py-10">
-      <SectionLabel as="h2">Skills</SectionLabel>
-      <ul class="grid gap-6 sm:grid-cols-2">
-        <li v-for="group in skills" :key="group.group">
-          <h3 class="mb-2 text-sm font-semibold text-ink">{{ group.group }}</h3>
-          <ul class="flex flex-wrap gap-1.5">
-            <li
-              v-for="item in group.items"
-              :key="item"
-              class="rounded border border-line px-2 py-0.5 font-mono text-xs text-muted"
-            >{{ item }}</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
+    <FadeIn>
+      <section class="py-10">
+        <SectionLabel as="h2">Experience</SectionLabel>
+        <ul class="space-y-6">
+          <li
+            v-for="entry in experience"
+            :key="entry.role + entry.period"
+            class="border-l border-line pl-5"
+          >
+            <p class="font-mono text-xs text-subtle">{{ entry.period }}</p>
+            <h3 class="mt-1 text-base font-semibold text-ink">{{ entry.role }}</h3>
+            <p class="text-sm text-accent">{{ entry.org }}</p>
+            <p class="mt-1 max-w-xl text-sm leading-relaxed text-muted">{{ entry.note }}</p>
+          </li>
+        </ul>
+      </section>
+    </FadeIn>
+
+    <FadeIn>
+      <section class="py-10">
+        <SectionLabel as="h2">Skills</SectionLabel>
+        <ul class="grid gap-6 sm:grid-cols-2">
+          <li v-for="group in skills" :key="group.group">
+            <h3 class="mb-2 text-sm font-semibold text-ink">{{ group.group }}</h3>
+            <ul class="flex flex-wrap gap-1.5">
+              <li
+                v-for="item in group.items"
+                :key="item"
+                class="rounded border border-line px-2 py-0.5 font-mono text-xs text-muted"
+              >{{ item }}</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </FadeIn>
   </div>
 </template>
