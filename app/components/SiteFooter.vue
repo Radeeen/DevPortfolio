@@ -21,7 +21,7 @@ const whatsapp = computed(() => config.public.whatsapp as string)
           <a
             class="text-accent hover:underline"
             href="https://linkedin.com/in/herickfauzi"
-            rel="noopener"
+            rel="noopener noreferrer"
             target="_blank"
           >LinkedIn</a>
         </li>
@@ -29,7 +29,7 @@ const whatsapp = computed(() => config.public.whatsapp as string)
           <a
             class="text-accent hover:underline"
             :href="`https://wa.me/${whatsapp}`"
-            rel="noopener"
+            rel="noopener noreferrer"
             target="_blank"
           >WhatsApp</a>
         </li>
