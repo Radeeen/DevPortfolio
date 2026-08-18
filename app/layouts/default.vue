@@ -7,7 +7,7 @@
       Skip to content
     </a>
     <SiteHeader />
-    <main id="main" class="flex-1">
+    <main id="main" tabindex="-1" class="flex-1">
       <slot />
     </main>
     <SiteFooter />
