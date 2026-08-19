@@ -41,7 +41,7 @@ const skills = [
 ]
 
 useSeoMeta({
-  title: 'R Herick Fauzi Komara Kusumah — Fullstack Developer',
+  title: 'Fullstack Developer',
   description:
     'Fullstack developer building production systems for Indonesian government institutions. Laravel, Vue, Node.js, and applied machine learning.',
 })

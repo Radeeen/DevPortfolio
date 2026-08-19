@@ -28,7 +28,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'https://devportfolio.vercel.app',
+    url: 'https://portfolio-herick.vercel.app',
     name: 'R Herick Fauzi Komara Kusumah',
     description:
       'Fullstack developer building production systems for Indonesian government institutions. Laravel, Vue, and applied machine learning.',
