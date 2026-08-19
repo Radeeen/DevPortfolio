@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const config = useRuntimeConfig()
-const whatsapp = computed(() => config.public.whatsapp as string)
+const whatsapp = computed(() => String(config.public.whatsapp ?? '').replace(/\D/g, ''))
 </script>
 
 <template>

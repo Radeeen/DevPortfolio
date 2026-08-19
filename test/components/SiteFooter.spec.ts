@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { mountSuspended, mockNuxtImport } from '@nuxt/test-utils/runtime'
 import SiteFooter from '~/components/SiteFooter.vue'
 
-let mockWhatsapp = ''
+let mockWhatsapp: string | number = ''
 
 mockNuxtImport('useRuntimeConfig', (original) => {
   return () => {
@@ -35,5 +35,26 @@ describe('SiteFooter', () => {
     const hrefs = wrapper.findAll('a').map(a => a.attributes('href'))
     expect(hrefs).toContain('https://wa.me/000')
     expect(wrapper.text()).toContain('WhatsApp')
+  })
+
+  it('renders a WhatsApp link when the env var arrives as a number (destr parses digit-only env strings to Number)', async () => {
+    // Simulates the real runtime shape: Nuxt's destr parses an unquoted
+    // NUXT_PUBLIC_WHATSAPP env value into a JS number, even though the
+    // runtimeConfig default and TS type say string.
+    mockWhatsapp = 6285320442887
+    const wrapper = await mountSuspended(SiteFooter)
+    const hrefs = wrapper.findAll('a').map(a => a.attributes('href'))
+    expect(hrefs).toContain('https://wa.me/6285320442887')
+    expect(wrapper.text()).toContain('WhatsApp')
+  })
+
+  it('strips formatting characters from the wa.me href (format guard)', async () => {
+    // If the env var is ever set with human-friendly formatting (spaces,
+    // dashes, a leading +), destr leaves it as a string and the raw value
+    // must not be inlined verbatim into the wa.me deep link.
+    mockWhatsapp = '+62 853-2044-2887'
+    const wrapper = await mountSuspended(SiteFooter)
+    const hrefs = wrapper.findAll('a').map(a => a.attributes('href'))
+    expect(hrefs).toContain('https://wa.me/6285320442887')
   })
 })
