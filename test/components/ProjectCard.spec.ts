@@ -6,7 +6,6 @@ const project = {
   path: '/projects/sentiment-analysis',
   title: 'Sentiment Analysis of DPR RI Social Media',
   summary: 'Comparing Extra Trees against Random Forest on 2,841 public comments.',
-  tags: ['data-ml'],
   stack: ['Python', 'scikit-learn'],
 }
 

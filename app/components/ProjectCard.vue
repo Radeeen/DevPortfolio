@@ -3,7 +3,6 @@ interface CardProject {
   path: string
   title: string
   summary: string
-  tags: string[]
   stack: string[]
 }
 

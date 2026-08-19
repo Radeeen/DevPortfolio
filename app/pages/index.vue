@@ -80,7 +80,6 @@ useSeoMeta({
                 path: project.path,
                 title: project.title,
                 summary: project.summary,
-                tags: project.tags,
                 stack: project.stack,
               }"
             />
