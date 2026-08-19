@@ -81,7 +81,7 @@ const showLinks = computed(
         </dd>
       </div>
     </dl>
-    <p v-if="props.project.confidential" class="text-xs leading-relaxed text-subtle">
+    <p v-if="props.project.confidential" class="mt-4 text-xs leading-relaxed text-subtle">
       Source code is not public — this system runs inside a government network.
     </p>
   </aside>
