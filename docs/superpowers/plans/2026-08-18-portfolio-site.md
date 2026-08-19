@@ -434,7 +434,11 @@ describe('project content files', () => {
 
   it.each(files)('%s never leaks the restricted module names', (file) => {
     const raw = readFileSync(join(DIR, file), 'utf-8').toLowerCase()
-    for (const banned of ['eperformance', 'puupolhukham', 'puspanlakuu', 'cmsbkd', 'pusaka', 'ksap', 'sileg']) {
+    // NOTE: the original plan inlined the restricted terms here in plaintext.
+    // That published, in a public repo, exactly what the guard exists to suppress.
+    // The shipped implementation matches truncated SHA-256 hashes instead — see
+    // test/content-schema.spec.ts. Do not reintroduce the words.
+    for (const banned of RESTRICTED_TERMS) {
       expect(raw, `${file} leaks restricted term "${banned}"`).not.toContain(banned)
     }
   })
