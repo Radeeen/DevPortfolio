@@ -41,7 +41,9 @@ An interactive 3D map where a user searches for a destination by name and gets
 the fastest route to it rendered in three dimensions, rather than a floor plan
 they have to interpret themselves.
 
-> **What I'd do differently.** The map is a standalone Unity application, which
+## What I'd do differently
+
+> The map is a standalone Unity application, which
 > means reaching it requires installing something — a real barrier for the
 > visitors it was built for. Today I would build it for the web so that it opens
 > from a QR code at the entrance, and validate the routes with people who do not

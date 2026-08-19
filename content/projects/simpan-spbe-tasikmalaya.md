@@ -41,7 +41,9 @@ A responsive prototype for the municipal SPBE platform, grounded in user
 research rather than assumption, and delivered in a form the development team
 could build from directly.
 
-> **What I'd do differently.** The design was validated through discussion, not
+## What I'd do differently
+
+> The design was validated through discussion, not
 > through testing — nobody attempted a task against the prototype while I
 > watched. Even five moderated sessions would have told me more about where
 > people got stuck than every stakeholder meeting combined, and I would insist

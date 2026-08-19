@@ -73,7 +73,9 @@ The architectural payoff is measurable in how the code is added rather than in a
 runtime figure. A new feature touches one module's directory. A developer new to
 a module reads that module. Nothing in the other eight can silently break.
 
-> **What I'd do differently.** The 141 service classes are the strongest part of
+## What I'd do differently
+
+> The 141 service classes are the strongest part of
 > the design and also where the next problem will appear — some now carry
 > responsibilities that belong to dedicated action or query classes. If I were
 > starting again I would set a stricter rule about what earns a place in a

@@ -57,9 +57,11 @@ production logging system. What exists is a demonstrated pipeline, not a
 delivered product, and I would rather describe it accurately than imply
 otherwise.
 
-> **What I'd do differently.** The prototype was evaluated on sampled frames
+## What I'd do differently
+
+> The prototype was evaluated on sampled frames
 > rather than a labelled test set, so I can quote confidence on individual reads
-> but not a end-to-end accuracy figure across varied conditions — which is
+> but not an end-to-end accuracy figure across varied conditions — which is
 > exactly the number anyone deploying it would want. I would build a labelled
 > evaluation set covering night, rain and low-angle plates first, and add a
 > confidence threshold that routes uncertain reads to human review instead of

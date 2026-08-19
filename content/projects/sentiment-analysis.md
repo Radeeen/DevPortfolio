@@ -66,7 +66,9 @@ runs repeatedly and energy or latency matters, Random Forest gives up very
 little for a substantial saving. Stating that trade-off explicitly, rather than
 reporting the higher accuracy figure and stopping, was the point of the study.
 
-> **What I'd do differently.** The dataset is heavily imbalanced — the neutral
+## What I'd do differently
+
+> The dataset is heavily imbalanced — the neutral
 > class dwarfs both negative and positive. A model that answered "neutral" every
 > single time would score around 91%, which means headline accuracy flatters
 > both classifiers, and it is why macro F1 sits at 0.62 and 0.53 while recall on

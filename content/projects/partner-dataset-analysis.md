@@ -36,7 +36,9 @@ show everything at once.
 Partner data became something a meeting could read at a glance and use to
 support a decision, instead of a spreadsheet nobody opened during the session.
 
-> **What I'd do differently.** The refresh was manual — new data meant redoing
+## What I'd do differently
+
+> The refresh was manual — new data meant redoing
 > preparation by hand, which is exactly the kind of task that quietly stops
 > happening once the person who built it moves on. I would script the cleaning
 > stage so the dashboards update from the source without me in the loop.
