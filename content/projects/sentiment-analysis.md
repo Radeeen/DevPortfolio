@@ -16,7 +16,7 @@ metrics:
     label: Macro F1 — the honest number
 featured: true
 confidential: false
-published: JUSTIN Vol 12 No 2 (2024)
+published: JUSTIN — Jurnal Sistem dan Teknologi Informasi (2026)
 ---
 
 ## Context
@@ -33,9 +33,12 @@ accuracy and energy consumption.
 
 ## My role
 
-Solo work, start to finish: collection, preprocessing, model comparison,
-energy measurement, and writing. The resulting paper was published in JUSTIN
-(Jurnal Sistem dan Teknologi Informasi) Vol 12 No 2, 2024.
+I did the research end to end: collection, preprocessing, model comparison,
+energy measurement, and writing. The resulting paper — *Analisis Sentimen
+Media Sosial Terhadap DPR RI: Perbandingan Akurasi Extra Trees Dan Random
+Forest Dengan Pendekatan Komputasi Hijau* — was published in JUSTIN (Jurnal
+Sistem dan Teknologi Informasi, Universitas Tanjungpura) in 2026, co-authored
+with A. Aradea.
 
 ## Approach
 

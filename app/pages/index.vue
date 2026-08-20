@@ -65,7 +65,7 @@ useSeoMeta({
           { value: '9', label: 'Modules in production' },
           { value: '141', label: 'Service classes' },
           { value: '2,841', label: 'Comments analysed' },
-          { value: '1', label: 'Peer-reviewed paper' },
+          { value: '2', label: 'Peer-reviewed papers' },
         ]"
       />
     </section>

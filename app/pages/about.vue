@@ -23,7 +23,7 @@ const organisational = [
 useSeoMeta({
   title: 'About',
   description:
-    'Informatics graduate from Siliwangi University, fullstack developer at DPR RI, published in JUSTIN Vol 12.',
+    'Informatics graduate from Siliwangi University, fullstack developer at DPR RI, twice published in JUSTIN.',
 })
 </script>
 
@@ -74,16 +74,28 @@ useSeoMeta({
 
     <FadeIn>
       <section class="mb-12">
-        <SectionLabel as="h2">Publication</SectionLabel>
-        <div class="rounded-lg border border-line bg-surface p-5">
-          <h3 class="text-base font-semibold text-ink">
-            Analisis Perbandingan Metode Think-Aloud, Evaluasi Heuristik dan
-            Cognitive Walkthrough untuk Evaluasi Usability pada Aplikasi Simpeda
-          </h3>
-          <p class="mt-2 font-mono text-sm text-accent">
-            JUSTIN — Jurnal Sistem dan Teknologi Informasi, Vol 12 No 2 (2024)
-          </p>
-        </div>
+        <SectionLabel as="h2">Publications</SectionLabel>
+        <ul class="space-y-4">
+          <li class="rounded-lg border border-line bg-surface p-5">
+            <h3 class="text-base font-semibold text-ink">
+              Analisis Sentimen Media Sosial Terhadap DPR RI: Perbandingan
+              Akurasi Extra Trees Dan Random Forest Dengan Pendekatan Komputasi
+              Hijau
+            </h3>
+            <p class="mt-2 font-mono text-sm text-accent">
+              JUSTIN — Jurnal Sistem dan Teknologi Informasi (2026)
+            </p>
+          </li>
+          <li class="rounded-lg border border-line bg-surface p-5">
+            <h3 class="text-base font-semibold text-ink">
+              Analisis Perbandingan Metode Think-Aloud, Evaluasi Heuristik dan
+              Cognitive Walkthrough untuk Evaluasi Usability pada Aplikasi Simpeda
+            </h3>
+            <p class="mt-2 font-mono text-sm text-accent">
+              JUSTIN — Jurnal Sistem dan Teknologi Informasi, Vol 12 No 2 (2024)
+            </p>
+          </li>
+        </ul>
       </section>
     </FadeIn>
 
