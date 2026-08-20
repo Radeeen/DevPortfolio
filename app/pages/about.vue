@@ -34,25 +34,35 @@ useSeoMeta({
       Fullstack developer, research-minded
     </h1>
 
-    <div class="mb-12 space-y-4 leading-relaxed text-muted">
-      <p>
-        I am an Informatics graduate from Siliwangi University, now working as a
-        fullstack developer on the internal systems of DPR RI — the House of
-        Representatives of the Republic of Indonesia. Most of what I build is
-        used by people who did not choose the software and cannot work around it,
-        which is a useful thing to keep in mind while building.
-      </p>
-      <p>
-        My route into engineering ran through data. My thesis compared two
-        ensemble classifiers on Indonesian social media sentiment and measured
-        what each one cost to run, which taught me to distrust a single headline
-        metric — a habit that has been more useful in production work than any
-        specific framework.
-      </p>
-      <p>
-        I work in Laravel, Vue, Node.js and Python. I am based in Jakarta and
-        open to fullstack and data roles.
-      </p>
+    <div class="mb-12 gap-8 space-y-4 leading-relaxed text-muted sm:flex sm:space-y-0">
+      <img
+        src="/img/herick-portrait.webp"
+        alt="Portrait of R Herick Fauzi Komara Kusumah"
+        width="128"
+        height="128"
+        loading="lazy"
+        class="h-32 w-32 shrink-0 rounded-lg border border-line object-cover"
+      >
+      <div class="space-y-4">
+        <p>
+          I am an Informatics graduate from Siliwangi University, now working as a
+          fullstack developer on the internal systems of DPR RI — the House of
+          Representatives of the Republic of Indonesia. Most of what I build is
+          used by people who did not choose the software and cannot work around it,
+          which is a useful thing to keep in mind while building.
+        </p>
+        <p>
+          My route into engineering ran through data. My thesis compared two
+          ensemble classifiers on Indonesian social media sentiment and measured
+          what each one cost to run, which taught me to distrust a single headline
+          metric — a habit that has been more useful in production work than any
+          specific framework.
+        </p>
+        <p>
+          I work in Laravel, Vue, Node.js and Python. I am based in Jakarta and
+          open to fullstack and data roles.
+        </p>
+      </div>
     </div>
 
     <FadeIn>
