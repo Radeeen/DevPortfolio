@@ -27,6 +27,15 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 
+  // This is a fully prerendered static export, so there is no runtime image
+  // optimiser. Left to auto-detect, @nuxt/image picks Vercel's provider and
+  // rewrites every image to /_vercel/image?url=… — an endpoint that does not
+  // exist on a static deployment, so all images 404 into the error page.
+  // Source images are pre-compressed to WebP, so no transform is needed.
+  image: {
+    provider: 'none',
+  },
+
   site: {
     url: 'https://portfolio-herick.vercel.app',
     name: 'R Herick Fauzi Komara Kusumah',
