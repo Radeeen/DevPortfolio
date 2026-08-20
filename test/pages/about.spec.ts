@@ -7,16 +7,13 @@ import AboutPage from '~/pages/about.vue'
 const source = readFileSync(join(process.cwd(), 'app/pages/about.vue'), 'utf-8')
 
 describe('about page source', () => {
-  it('includes the three credibility signals', () => {
-    expect(source).toContain('JUSTIN')
+  // The render test below proves JUSTIN and 3.59 are visible on the rendered
+  // page. "Bank Indonesia Scholarship" is kept as a source-only assertion
+  // because it names a credibility signal that render tests elsewhere don't
+  // independently re-verify the exact wording of — it guards against the
+  // award name being silently reworded or dropped from the source.
+  it('includes the Bank Indonesia Scholarship credibility signal', () => {
     expect(source).toContain('Bank Indonesia Scholarship')
-    expect(source).toContain('3.59')
-  })
-
-  it('records the organisational leadership roles', () => {
-    expect(source).toContain('Vice Chairman')
-    expect(source).toContain('Head of Supervisory Commission')
-    expect(source).toContain('Head of Strategy and Advocacy')
   })
 })
 

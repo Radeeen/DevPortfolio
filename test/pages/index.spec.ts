@@ -43,19 +43,11 @@ mockNuxtImport('queryCollection', () => {
 })
 
 describe('home page source', () => {
-  it('leads with the fullstack positioning, not data analysis', () => {
-    expect(source).toContain('Fullstack Developer')
-  })
-
-  it('names the technologies missing from the old portfolio', () => {
-    for (const tech of ['Laravel', 'Vue', 'Node.js']) {
-      expect(source, `home page must mention ${tech}`).toContain(tech)
-    }
-    expect(source, 'home page must mention Java standalone, not just as part of JavaScript').toMatch(
-      /\bJava\b(?!Script)/,
-    )
-  })
-
+  // The render test below proves the positioning and technologies are
+  // visible on the rendered page. This predicate is kept as a source-only
+  // assertion because it guards query correctness — a mocked
+  // `queryCollection` in the render test can't see whether the real query
+  // actually filters on `featured`, only that the mock's canned data appears.
   it('queries only featured projects', () => {
     expect(source).toContain("where('featured', '=', true)")
   })
@@ -66,6 +58,8 @@ describe('home page render', () => {
     const IndexPage = await import('~/pages/index.vue').then(m => m.default)
     const wrapper = await mountSuspended(IndexPage)
     const text = wrapper.text()
+
+    expect(text, 'rendered home page must lead with the fullstack positioning').toContain('Fullstack Developer')
 
     for (const tech of ['Laravel', 'Vue', 'Node.js']) {
       expect(text, `rendered home page must show ${tech}`).toContain(tech)
