@@ -6,8 +6,16 @@
       </NuxtLink>
       <nav aria-label="Main">
         <ul class="flex items-center gap-6 text-sm text-muted">
-          <li><NuxtLink to="/projects" class="hover:text-ink">Work</NuxtLink></li>
-          <li><NuxtLink to="/about" class="hover:text-ink">About</NuxtLink></li>
+          <li>
+            <NuxtLink v-slot="{ href, navigate, isActive }" to="/projects" custom>
+              <a :href="href ?? undefined" class="hover:text-ink" :class="{ 'text-ink': isActive }" @click="navigate">Work</a>
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink v-slot="{ href, navigate, isActive }" to="/about" custom>
+              <a :href="href ?? undefined" class="hover:text-ink" :class="{ 'text-ink': isActive }" @click="navigate">About</a>
+            </NuxtLink>
+          </li>
           <li>
             <a href="/cv.pdf" class="hover:text-ink" download>CV</a>
           </li>
