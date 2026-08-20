@@ -55,55 +55,63 @@ useSeoMeta({
       </p>
     </div>
 
-    <section class="mb-12">
-      <SectionLabel as="h2">Education</SectionLabel>
-      <div class="border-l border-line pl-5">
-        <p class="font-mono text-xs text-subtle">2020 — 2025</p>
-        <h3 class="mt-1 text-base font-semibold text-ink">
-          Bachelor of Engineering, Informatics
-        </h3>
-        <p class="text-sm text-accent">Siliwangi University — GPA 3.59 / 4.00</p>
-        <p class="mt-1 text-sm leading-relaxed text-muted">
-          Thesis: Sentiment Analysis of Social Media Regarding DPR RI — comparing
-          Extra Trees and Random Forest accuracy with a green computing approach.
+    <FadeIn>
+      <section class="mb-12">
+        <SectionLabel as="h2">Education</SectionLabel>
+        <div class="border-l border-line pl-5">
+          <p class="font-mono text-xs text-subtle">2020 — 2025</p>
+          <h3 class="mt-1 text-base font-semibold text-ink">
+            Bachelor of Engineering, Informatics
+          </h3>
+          <p class="text-sm text-accent">Siliwangi University — GPA 3.59 / 4.00</p>
+          <p class="mt-1 text-sm leading-relaxed text-muted">
+            Thesis: Sentiment Analysis of Social Media Regarding DPR RI — comparing
+            Extra Trees and Random Forest accuracy with a green computing approach.
+          </p>
+        </div>
+      </section>
+    </FadeIn>
+
+    <FadeIn>
+      <section class="mb-12">
+        <SectionLabel as="h2">Publication</SectionLabel>
+        <div class="rounded-lg border border-line bg-surface p-5">
+          <h3 class="text-base font-semibold text-ink">
+            Analisis Perbandingan Metode Think-Aloud, Evaluasi Heuristik dan
+            Cognitive Walkthrough untuk Evaluasi Usability pada Aplikasi Simpeda
+          </h3>
+          <p class="mt-2 font-mono text-sm text-accent">
+            JUSTIN — Jurnal Sistem dan Teknologi Informasi, Vol 12 No 2 (2024)
+          </p>
+        </div>
+      </section>
+    </FadeIn>
+
+    <FadeIn>
+      <section class="mb-12">
+        <SectionLabel as="h2">Awards</SectionLabel>
+        <p class="text-sm text-muted">
+          <span class="text-ink">Bank Indonesia Scholarship</span> — 2022 to 2024
         </p>
-      </div>
-    </section>
+      </section>
+    </FadeIn>
 
-    <section class="mb-12">
-      <SectionLabel as="h2">Publication</SectionLabel>
-      <div class="rounded-lg border border-line bg-surface p-5">
-        <h3 class="text-base font-semibold text-ink">
-          Analisis Perbandingan Metode Think-Aloud, Evaluasi Heuristik dan
-          Cognitive Walkthrough untuk Evaluasi Usability pada Aplikasi Simpeda
-        </h3>
-        <p class="mt-2 font-mono text-sm text-accent">
-          JUSTIN — Jurnal Sistem dan Teknologi Informasi, Vol 12 No 2 (2024)
-        </p>
-      </div>
-    </section>
-
-    <section class="mb-12">
-      <SectionLabel as="h2">Awards</SectionLabel>
-      <p class="text-sm text-muted">
-        <span class="text-ink">Bank Indonesia Scholarship</span> — 2022 to 2024
-      </p>
-    </section>
-
-    <section>
-      <SectionLabel as="h2">Leadership</SectionLabel>
-      <ul class="space-y-6">
-        <li
-          v-for="entry in organisational"
-          :key="entry.role"
-          class="border-l border-line pl-5"
-        >
-          <p class="font-mono text-xs text-subtle">{{ entry.period }}</p>
-          <h3 class="mt-1 text-base font-semibold text-ink">{{ entry.role }}</h3>
-          <p class="text-sm text-accent">{{ entry.org }}</p>
-          <p class="mt-1 text-sm leading-relaxed text-muted">{{ entry.note }}</p>
-        </li>
-      </ul>
-    </section>
+    <FadeIn>
+      <section>
+        <SectionLabel as="h2">Leadership</SectionLabel>
+        <ul class="space-y-6">
+          <li
+            v-for="entry in organisational"
+            :key="entry.role"
+            class="border-l border-line pl-5"
+          >
+            <p class="font-mono text-xs text-subtle">{{ entry.period }}</p>
+            <h3 class="mt-1 text-base font-semibold text-ink">{{ entry.role }}</h3>
+            <p class="text-sm text-accent">{{ entry.org }}</p>
+            <p class="mt-1 text-sm leading-relaxed text-muted">{{ entry.note }}</p>
+          </li>
+        </ul>
+      </section>
+    </FadeIn>
   </div>
 </template>
