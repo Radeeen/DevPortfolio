@@ -117,7 +117,7 @@ useSeoMeta({
 
 .case-study :deep(blockquote p) {
   margin-bottom: 0;
-  color: #d4c4a8;
+  color: var(--color-warn-ink);
 }
 
 .case-study :deep(table) {

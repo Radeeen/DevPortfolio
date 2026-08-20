@@ -24,7 +24,7 @@ const props = defineProps<{ project: CardProject }>()
       <li
         v-for="tech in props.project.stack"
         :key="tech"
-        class="rounded border border-line px-2 py-0.5 font-mono text-xs text-subtle"
+        class="rounded border border-line px-2 py-0.5 font-mono text-xs text-muted"
       >
         {{ tech }}
       </li>
