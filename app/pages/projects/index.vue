@@ -38,26 +38,28 @@ useSeoMeta({
       interface design. Filter by the category you care about.
     </p>
 
-    <TagFilter v-model="selected" :tags="tags" class="mb-8" />
+    <FadeIn>
+      <TagFilter v-model="selected" :tags="tags" class="mb-8" />
 
-    <p class="mb-4 font-mono text-xs text-subtle" aria-live="polite">
-      Showing {{ visible.length }} of {{ projects?.length ?? 0 }}
-    </p>
+      <p class="mb-4 font-mono text-xs text-subtle" aria-live="polite">
+        Showing {{ visible.length }} of {{ projects?.length ?? 0 }}
+      </p>
 
-    <section aria-labelledby="all-projects-heading">
-      <h2 id="all-projects-heading" class="sr-only">All projects</h2>
-      <div class="grid gap-4 sm:grid-cols-2">
-        <ProjectCard
-          v-for="project in visible"
-          :key="project.path"
-          :project="{
-            path: project.path,
-            title: project.title,
-            summary: project.summary,
-            stack: project.stack,
-          }"
-        />
-      </div>
-    </section>
+      <section aria-labelledby="all-projects-heading">
+        <h2 id="all-projects-heading" class="sr-only">All projects</h2>
+        <ul class="grid gap-4 sm:grid-cols-2">
+          <li v-for="project in visible" :key="project.path">
+            <ProjectCard
+              :project="{
+                path: project.path,
+                title: project.title,
+                summary: project.summary,
+                stack: project.stack,
+              }"
+            />
+          </li>
+        </ul>
+      </section>
+    </FadeIn>
   </div>
 </template>
