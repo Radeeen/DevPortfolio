@@ -1,13 +1,26 @@
-# Dependencies
-node_modules/
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
 
-# Nuxt
-.nuxt/
-.output/
-.data/
-dist/
+# Node dependencies
+node_modules
 
-# Environment
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+Thumbs.db
+.fleet
+.idea
+.vscode/
+
+# Local env files
 .env
 .env.*
 !.env.example
@@ -15,12 +28,7 @@ dist/
 # Brainstorming companion (local only)
 .superpowers/
 
-# Editor / OS
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-
-# Logs
-*.log
-npm-debug.log*
+# Personal documents — never commit
+cv.pdf
+*.pdf
+!public/cv.pdf
