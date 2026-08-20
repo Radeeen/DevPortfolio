@@ -35,11 +35,26 @@ The work ran in five stages.
   interface and a route-selection algorithm that returns the fastest path
 - **Demo** to stakeholders
 
+The map works at two scales. Outdoor mode routes between buildings across the
+complex; indoor mode continues the route inside a building, down to the room.
+
+![Outdoor routing to Gedung Nusantara 3, showing turn-by-turn directions and a magenta route line across the 3D complex](/img/projects/navigation-outdoor-route.webp)
+
+Each route returns turn-by-turn directions in plain Indonesian — "lurus sejauh
+45m", "belok kanan sejauh 267m" — with total distance, walking time and an
+energy estimate. The 312m route above resolves to four minutes.
+
+![Indoor routing to the Bamus room, with the route drawn through corridors inside the building](/img/projects/navigation-indoor-route.webp)
+
+Indoor mode was the harder half. Between-building routing is a graph over open
+space; routing inside a building means modelling corridors, stairwells and
+doorways as traversable and everything else as not.
+
 ## Result
 
 An interactive 3D map where a user searches for a destination by name and gets
-the fastest route to it rendered in three dimensions, rather than a floor plan
-they have to interpret themselves.
+the fastest route to it rendered in three dimensions — continuing indoors to
+the specific room — rather than a floor plan they have to interpret themselves.
 
 ## What I'd do differently
 

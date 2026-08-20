@@ -42,14 +42,23 @@ The pipeline runs in three stages on a live video feed.
    number, vehicle type, and entry and exit timestamps — which is what makes
    the log searchable afterwards.
 
+![Live gate footage with vehicles in orange bounding boxes and the recognised plate rendered above the tracked car](/img/projects/plate-detection.webp)
+
 Detection runs at roughly **256ms per frame**, fast enough to track vehicles
 approaching a gate at entry speed. On the sampled plate, OCR returned a
 confidence of **0.95**.
 
+A database row nobody reads is not much better than a paper book, so the
+records surface in a dashboard — each vehicle listed with its plate, type,
+entry and exit times, and the captured frame it was read from.
+
+![Dashboard listing logged vehicles with plate number, vehicle type, entry and exit times, and the capture photo](/img/projects/plate-dashboard.webp)
+
 ## Result
 
-A working prototype: it detects vehicles on a live feed, reads plates, and
-writes structured records to the database without manual entry.
+A working prototype: it detects vehicles on a live feed, reads plates, writes
+structured records to the database without manual entry, and presents them in
+a searchable dashboard.
 
 **It was not finished.** My internship period ended before the system could be
 hardened for continuous operation, so it was never deployed as the gate's
